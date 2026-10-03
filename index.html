@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mudassir Hussain | Senior SDET</title>
+<meta name="description" content="Mudassir Hussain – Senior SDET with 3+ years in manual and automation testing (Selenium, Java, TestNG, Rest Assured, BDD).">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&family=Nunito+Sans:wght@400;600;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --navy:#0F1E30; --navy-2:#16293F; --blue:#205E99; --blue-l:#4A8FD4; --sky:#E6F0FA;
+  --bg:#FFFFFF; --bg-alt:#F4F7FB; --fg:#16202C; --muted:#5A6878; --line:#DDE5EE; --pass:#1D8A5A;
+  --head:"Poppins",system-ui,sans-serif; --body:"Nunito Sans",system-ui,sans-serif; --mono:"JetBrains Mono",ui-monospace,monospace;
+  --nav-h:68px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:var(--nav-h)}
+body{font-family:var(--body);color:var(--fg);background:var(--bg);line-height:1.65;font-size:17px}
+img{max-width:100%;display:block}
+a{color:var(--blue)}
+h1,h2,h3{font-family:var(--head);line-height:1.2}
+.container{max-width:1120px;margin:0 auto;padding:0 20px}
+section{padding:88px 0}
+section.alt{background:var(--bg-alt)}
+.sec-head{text-align:center;margin-bottom:48px}
+.sec-head .kicker{font-family:var(--mono);font-size:13px;letter-spacing:.12em;text-transform:uppercase;color:var(--blue)}
+.sec-head h2{font-size:clamp(28px,4vw,38px);margin-top:8px}
+.sec-head h2::after{content:"";display:block;width:56px;height:3px;background:var(--blue);margin:14px auto 0;border-radius:2px}
+
+/* NAVBAR */
+.nav{position:fixed;inset:0 0 auto 0;height:var(--nav-h);z-index:50;transition:background .25s,box-shadow .25s}
+.nav.scrolled{background:rgba(15,30,48,.96);box-shadow:0 6px 20px rgba(0,0,0,.18);backdrop-filter:blur(6px)}
+.nav .container{height:100%;display:flex;align-items:center;justify-content:space-between}
+.logo{font-family:var(--head);font-weight:700;font-size:22px;color:#fff;text-decoration:none;letter-spacing:.5px}
+.logo span{color:var(--blue-l)}
+.menu{display:flex;gap:28px;list-style:none;align-items:center}
+.menu a{color:#D6E2EF;text-decoration:none;font-weight:600;font-size:15px;position:relative;padding:4px 0}
+.menu a::after{content:"";position:absolute;left:0;bottom:-2px;width:0;height:2px;background:var(--blue-l);transition:width .25s}
+.menu a:hover,.menu a.active{color:#fff}
+.menu a:hover::after,.menu a.active::after{width:100%}
+.menu .btn-nav{border:1.5px solid var(--blue-l);padding:7px 16px;border-radius:6px;color:#fff}
+.menu .btn-nav::after{display:none}
+.menu .btn-nav:hover{background:var(--blue-l)}
+.burger{display:none;background:none;border:0;cursor:pointer;width:40px;height:40px;position:relative}
+.burger span,.burger span::before,.burger span::after{position:absolute;left:8px;width:24px;height:2px;background:#fff;content:"";transition:.25s}
+.burger span{top:19px}.burger span::before{top:-7px;left:0}.burger span::after{top:7px;left:0}
+.nav.open .burger span{background:transparent}
+.nav.open .burger span::before{top:0;transform:rotate(45deg)}
+.nav.open .burger span::after{top:0;transform:rotate(-45deg)}
+
+/* HERO */
+.hero{min-height:100vh;display:flex;align-items:center;background:radial-gradient(1200px 500px at 85% 20%,#1E3E63 0%,transparent 60%),linear-gradient(160deg,var(--navy) 0%,var(--navy-2) 100%);color:#fff;padding:calc(var(--nav-h) + 40px) 0 60px}
+.hero .container{display:grid;grid-template-columns:1.3fr 1fr;gap:56px;align-items:center}
+.hero .hello{font-family:var(--mono);color:var(--blue-l);font-size:15px}
+.hero h1{font-size:clamp(40px,6vw,62px);margin:10px 0 6px}
+.hero .role{font-family:var(--head);font-size:clamp(20px,2.6vw,26px);color:#C9D7E6;font-weight:500;min-height:1.4em}
+.hero .role .typed{color:#fff;border-right:2px solid var(--blue-l);padding-right:4px}
+.hero p.intro{color:#B4C3D3;max-width:34em;margin-top:18px}
+.hero .cta{display:flex;flex-wrap:wrap;gap:14px;margin-top:32px}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:12px 24px;border-radius:8px;font-weight:700;font-size:15px;text-decoration:none;transition:transform .15s,background .2s,color .2s}
+.btn:hover{transform:translateY(-2px)}
+.btn-primary{background:var(--blue-l);color:#fff}
+.btn-primary:hover{background:#3A7DC0}
+.btn-ghost{border:1.5px solid #8FAAC6;color:#fff}
+.btn-ghost:hover{background:#fff;color:var(--navy)}
+.socials{display:flex;gap:12px;margin-top:28px}
+.socials a{width:42px;height:42px;border-radius:50%;display:grid;place-items:center;border:1.5px solid #3C5672;color:#D6E2EF;transition:.2s}
+.socials a:hover{background:var(--blue-l);border-color:var(--blue-l);color:#fff}
+.socials svg{width:19px;height:19px;fill:currentColor}
+.photo-wrap{justify-self:center;position:relative;width:min(340px,80vw);aspect-ratio:1}
+.photo-wrap::before{content:"";position:absolute;inset:-14px;border-radius:50%;border:2px dashed #3C5672;animation:spin 40s linear infinite}
+.photo{width:100%;height:100%;border-radius:50%;overflow:hidden;background:linear-gradient(145deg,#2A6BAA,#173A5E);display:grid;place-items:center;box-shadow:0 30px 60px -20px rgba(0,0,0,.6)}
+.photo img{width:100%;height:100%;object-fit:cover}
+.photo .initials{font-family:var(--head);font-size:96px;font-weight:700;color:#fff;letter-spacing:2px}
+.badge{position:absolute;background:#fff;color:var(--fg);border-radius:10px;padding:10px 14px;box-shadow:0 12px 30px -10px rgba(0,0,0,.45);font-size:13px;line-height:1.3}
+.badge b{display:block;font-family:var(--head);font-size:20px;color:var(--blue)}
+.badge.b1{left:-18px;bottom:18%}
+.badge.b2{right:-14px;top:12%}
+@keyframes spin{to{transform:rotate(360deg)}}
+
+/* ABOUT */
+.about{display:grid;grid-template-columns:1.4fr 1fr;gap:48px;align-items:start}
+.about p{color:var(--muted);margin-bottom:16px}
+.about p b{color:var(--fg)}
+.info{background:var(--bg-alt);border:1px solid var(--line);border-radius:12px;padding:26px}
+.info div{display:flex;justify-content:space-between;gap:12px;padding:10px 0;border-bottom:1px solid var(--line);font-size:15px}
+.info div:last-child{border-bottom:0}
+.info span:first-child{color:var(--muted)}
+.info span:last-child{font-weight:700;text-align:right}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-top:48px}
+.stat{text-align:center;padding:24px 12px;border-radius:12px;background:var(--bg);border:1px solid var(--line)}
+.stat .n{font-family:var(--head);font-size:36px;font-weight:700;color:var(--blue)}
+.stat .l{color:var(--muted);font-size:14px}
+
+/* SKILLS */
+.skills{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.skill-card{background:#fff;border:1px solid var(--line);border-radius:12px;padding:26px;transition:transform .2s,box-shadow .2s}
+.skill-card:hover{transform:translateY(-4px);box-shadow:0 16px 30px -18px rgba(15,30,48,.35)}
+.skill-card .ic{width:44px;height:44px;border-radius:10px;background:var(--sky);color:var(--blue);display:grid;place-items:center;margin-bottom:14px}
+.skill-card .ic svg{width:22px;height:22px;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.skill-card h3{font-size:18px;margin-bottom:12px}
+.tags{display:flex;flex-wrap:wrap;gap:7px}
+.tags span{font-size:13.5px;background:var(--bg-alt);border:1px solid var(--line);padding:3px 11px;border-radius:999px}
+
+/* EXPERIENCE timeline */
+.timeline{position:relative;max-width:900px;margin:0 auto;padding-left:34px}
+.timeline::before{content:"";position:absolute;left:9px;top:6px;bottom:6px;width:2px;background:var(--line)}
+.tl-item{position:relative;margin-bottom:40px}
+.tl-item:last-child{margin-bottom:0}
+.tl-item::before{content:"";position:absolute;left:-31px;top:8px;width:16px;height:16px;border-radius:50%;background:#fff;border:3px solid var(--blue)}
+.tl-item.current::before{background:var(--blue)}
+.tl-card{background:#fff;border:1px solid var(--line);border-radius:12px;padding:26px}
+.tl-top{display:flex;justify-content:space-between;align-items:baseline;flex-wrap:wrap;gap:6px 16px}
+.tl-top h3{font-size:21px}
+.date{font-family:var(--mono);font-size:13px;color:var(--blue);background:var(--sky);padding:3px 10px;border-radius:6px}
+.company{color:var(--muted);margin:4px 0 14px}
+.company b{color:var(--fg)}
+.tl-card ul{padding-left:20px;color:#34404D}
+.tl-card li{margin-bottom:7px}
+.tl-card li::marker{color:var(--blue)}
+.env{display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin:0 0 14px;font-family:var(--mono);font-size:12.5px}
+.env span{border:1px solid var(--line);border-radius:6px;padding:2px 9px;background:var(--bg-alt)}
+.env i{font-style:normal;color:var(--muted)}
+
+/* PROJECTS */
+.projects{display:grid;grid-template-columns:repeat(2,1fr);gap:24px}
+.proj{background:#fff;border:1px solid var(--line);border-radius:12px;overflow:hidden;display:flex;flex-direction:column;transition:transform .2s,box-shadow .2s}
+.proj:hover{transform:translateY(-4px);box-shadow:0 16px 30px -18px rgba(15,30,48,.35)}
+.proj-head{background:linear-gradient(135deg,var(--navy),#1E4A78);color:#fff;padding:22px 24px}
+.proj-head .type{font-family:var(--mono);font-size:12px;color:#9EC3E8;letter-spacing:.08em;text-transform:uppercase}
+.proj-head h3{font-size:21px;margin-top:6px}
+.proj-body{padding:22px 24px;flex:1;display:flex;flex-direction:column}
+.proj-body ul{padding-left:18px;color:#34404D;margin-bottom:18px}
+.proj-body li{margin-bottom:6px}
+.proj-body .tags{margin-top:auto}
+
+/* ACHIEVEMENTS */
+.ach{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
+.ach-item{display:flex;gap:14px;background:#fff;border:1px solid var(--line);border-radius:12px;padding:20px}
+.ach-item .tick{flex:none;width:30px;height:30px;border-radius:50%;background:#E3F4EC;color:var(--pass);display:grid;place-items:center;font-weight:700}
+.ach-item p{color:#34404D;font-size:16px}
+
+/* CREDENTIALS */
+.creds{display:grid;grid-template-columns:1fr 1fr;gap:28px}
+.cred-col h3{font-size:20px;margin-bottom:16px;display:flex;align-items:center;gap:10px}
+.cred{border-left:3px solid var(--blue);background:#fff;border-radius:0 10px 10px 0;padding:14px 18px;margin-bottom:14px;box-shadow:0 1px 0 var(--line)}
+.cred .t{font-weight:700}
+.cred .s{color:var(--muted);font-size:15px}
+
+/* CONTACT */
+.contact{background:linear-gradient(160deg,var(--navy) 0%,var(--navy-2) 100%);color:#fff;text-align:center}
+.contact .sec-head h2{color:#fff}
+.contact .sec-head .kicker{color:var(--blue-l)}
+.contact p.lead{color:#B4C3D3;max-width:560px;margin:0 auto 34px}
+.contact-cards{display:flex;justify-content:center;gap:18px;flex-wrap:wrap}
+.c-card{background:rgba(255,255,255,.06);border:1px solid #2E4762;border-radius:12px;padding:20px 26px;min-width:240px;text-decoration:none;color:#fff;transition:.2s}
+.c-card:hover{background:rgba(255,255,255,.12);transform:translateY(-3px)}
+.c-card .k{font-family:var(--mono);font-size:12px;color:#9EC3E8;letter-spacing:.08em;text-transform:uppercase}
+.c-card .v{font-weight:700;margin-top:4px;word-break:break-all}
+footer{background:#0A1522;color:#8299B1;text-align:center;padding:22px 20px;font-size:14px}
+
+/* reveal */
+.reveal{opacity:1;transform:none}
+.js .reveal{opacity:0;transform:translateY(24px);transition:opacity .6s ease,transform .6s ease}
+.js .reveal.in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){.js .reveal{opacity:1;transform:none;transition:none}.photo-wrap::before{animation:none}html{scroll-behavior:auto}}
+
+/* RESPONSIVE */
+@media (max-width:960px){
+  .skills{grid-template-columns:repeat(2,1fr)}
+  .stats{grid-template-columns:repeat(2,1fr)}
+}
+@media (max-width:860px){
+  .burger{display:block}
+  .menu{position:fixed;top:var(--nav-h);left:0;right:0;background:var(--navy);flex-direction:column;gap:0;padding:8px 0 16px;transform:translateY(-120%);transition:transform .3s;box-shadow:0 10px 20px rgba(0,0,0,.25)}
+  .nav.open .menu{transform:none}
+  .nav.open{background:var(--navy)}
+  .menu li{width:100%;text-align:center}
+  .menu a{display:block;padding:12px}
+  .menu .btn-nav{display:inline-block;margin-top:8px}
+  .hero .container{grid-template-columns:1fr;text-align:center}
+  .hero .cta,.socials{justify-content:center}
+  .hero p.intro{margin-inline:auto}
+  .photo-wrap{grid-row:1;width:min(240px,64vw)}
+  .photo .initials{font-size:68px}
+  .badge{display:none}
+  .about,.creds,.projects,.ach{grid-template-columns:1fr}
+}
+@media (max-width:560px){
+  section{padding:64px 0}
+  body{font-size:16px}
+  .skills{grid-template-columns:1fr}
+  .timeline{padding-left:26px}
+  .tl-item::before{left:-24px}
+  .timeline::before{left:6px}
+  .tl-card{padding:20px}
+}
+</style>
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav class="nav" id="nav">
+  <div class="container">
+    <a href="#home" class="logo">Mudassir<span>.</span></a>
+    <button class="burger" id="burger" aria-label="Open menu" aria-expanded="false"><span></span></button>
+    <ul class="menu" id="menu">
+      <li><a href="#home" class="active">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#credentials">Credentials</a></li>
+      <li><a href="Mudassir_Hussain_Resume.pdf" class="btn-nav" target="_blank" rel="noopener">Resume</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- HERO -->
+<header class="hero" id="home">
+  <div class="container">
+    <div>
+      <div class="hello">Hi, I'm</div>
+      <h1>Mudassir Hussain</h1>
+      <div class="role">I'm a <span class="typed" id="typed">Senior SDET</span></div>
+      <p class="intro">Senior SDET with 3+ years of experience in manual and automation testing of enterprise web applications. I currently test Keychain's AI-powered CPG manufacturing platform, and previously worked on an Aflac insurance product.</p>
+      <div class="cta">
+        <a href="Mudassir_Hussain_Resume.pdf" class="btn btn-primary" target="_blank" rel="noopener">View Resume</a>
+        <a href="#contact" class="btn btn-ghost">Contact Me</a>
+      </div>
+      <div class="socials">
+        <a href="https://www.linkedin.com/in/mudassir-hussain-94010b221/" target="_blank" rel="noopener" aria-label="LinkedIn"><svg viewBox="0 0 24 24"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.86 0-2.14 1.45-2.14 2.94v5.67H9.34V9h3.42v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0z"/></svg></a>
+        <a href="https://github.com/Hussain1478" target="_blank" rel="noopener" aria-label="GitHub"><svg viewBox="0 0 24 24"><path d="M12 .3a12 12 0 0 0-3.8 23.4c.6.1.8-.3.8-.6v-2c-3.3.7-4-1.6-4-1.6-.6-1.4-1.4-1.8-1.4-1.8-1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1 1.8 2.8 1.3 3.5 1 0-.8.4-1.3.7-1.6-2.7-.3-5.5-1.3-5.5-6 0-1.2.5-2.3 1.3-3.1-.2-.4-.6-1.6 0-3.2 0 0 1-.3 3.4 1.2a11.5 11.5 0 0 1 6 0c2.3-1.5 3.3-1.2 3.3-1.2.6 1.6.2 2.8 0 3.2.9.8 1.3 1.9 1.3 3.2 0 4.6-2.8 5.6-5.5 5.9.5.4.9 1 .9 2.2v3.3c0 .3.1.7.8.6A12 12 0 0 0 12 .3"/></svg></a>
+        <a href="mailto:hussain7mudassir@gmail.com" aria-label="Email"><svg viewBox="0 0 24 24"><path d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2zm0 4.2-8 5-8-5V6l8 5 8-5v2.2z"/></svg></a>
+      </div>
+    </div>
+    <div class="photo-wrap">
+      <div class="photo">
+        <img src="photo.jpg" alt="Mudassir Hussain" onerror="this.remove()">
+        <span class="initials">MH</span>
+      </div>
+      <div class="badge b1"><b>3+ yrs</b>QA &amp; Automation</div>
+      <div class="badge b2"><b>500+</b>Test cases</div>
+    </div>
+  </div>
+</header>
+
+<!-- ABOUT -->
+<section id="about">
+  <div class="container">
+    <div class="sec-head reveal"><div class="kicker">Get to know me</div><h2>About Me</h2></div>
+    <div class="about reveal">
+      <div>
+        <p>I'm a <b>Senior SDET</b> who owns quality end to end, from reading the PRD and writing <b>Gherkin scenarios</b> to building <b>Selenium WebDriver</b> and <b>Rest Assured</b> automation that runs release after release.</p>
+        <p>At <b>Recrosoft</b>, I test <b>Keychain</b>, an AI-powered platform that connects CPG brands with manufacturers. I plan and test new features on Staging, automate them, and run regression on UAT twice a week before releases go to Production.</p>
+        <p>Before that, at <b>Coforge</b>, I spent nearly three years on an <b>Aflac</b> insurance product covering functional, regression, API, SQL, mobile and data migration testing. I use <b>Claude</b> and <b>GitHub Copilot</b> to speed up test design and automation, and I'm <b>LOMA-281 certified</b>.</p>
+      </div>
+      <div class="info">
+        <div><span>Name</span><span>Mudassir Hussain</span></div>
+        <div><span>Role</span><span>Senior SDET</span></div>
+        <div><span>Location</span><span>Noida, India</span></div>
+        <div><span>Experience</span><span>3+ years</span></div>
+        <div><span>Domains</span><span>Insurance, CPG Manufacturing</span></div>
+        <div><span>Email</span><span><a href="mailto:hussain7mudassir@gmail.com">hussain7mudassir@gmail.com</a></span></div>
+      </div>
+    </div>
+    <div class="stats reveal">
+      <div class="stat"><div class="n">3+</div><div class="l">Years of experience</div></div>
+      <div class="stat"><div class="n">500+</div><div class="l">Test cases executed</div></div>
+      <div class="stat"><div class="n">2</div><div class="l">Enterprise projects</div></div>
+      <div class="stat"><div class="n">3</div><div class="l">Certifications</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- SKILLS -->
+<section id="skills" class="alt">
+  <div class="container">
+    <div class="sec-head reveal"><div class="kicker">What I work with</div><h2>Skills</h2></div>
+    <div class="skills">
+      <div class="skill-card reveal"><div class="ic"><svg viewBox="0 0 24 24"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg></div><h3>Automation</h3><div class="tags"><span>Selenium WebDriver</span><span>Java</span><span>TestNG</span><span>Maven</span><span>Rest Assured</span><span>Apache POI</span></div></div>
+      <div class="skill-card reveal"><div class="ic"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg></div><h3>Frameworks &amp; Methods</h3><div class="tags"><span>Page Object Model</span><span>Data-Driven</span><span>Hybrid</span><span>BDD (Gherkin)</span><span>Agile Scrum</span><span>CI/CD</span><span>SDLC</span><span>STLC</span><span>OOPs</span></div></div>
+      <div class="skill-card reveal"><div class="ic"><svg viewBox="0 0 24 24"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg></div><h3>Testing</h3><div class="tags"><span>Regression</span><span>Functional &amp; E2E</span><span>System &amp; Integration</span><span>Smoke &amp; Sanity</span><span>UAT</span><span>Cross Browser</span><span>Mobile (Android &amp; iOS)</span><span>Performance</span><span>Defect Triage &amp; RCA</span></div></div>
+      <div class="skill-card reveal"><div class="ic"><svg viewBox="0 0 24 24"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/></svg></div><h3>API, Performance &amp; Data</h3><div class="tags"><span>Postman</span><span>Rest Assured</span><span>JMeter</span><span>SQL</span><span>MySQL</span></div></div>
+      <div class="skill-card reveal"><div class="ic"><svg viewBox="0 0 24 24"><circle cx="18" cy="18" r="3"/><circle cx="6" cy="6" r="3"/><path d="M13 6h3a2 2 0 0 1 2 2v7"/><line x1="6" y1="9" x2="6" y2="21"/></svg></div><h3>CI/CD &amp; Tracking</h3><div class="tags"><span>Jenkins</span><span>Git</span><span>GitHub</span><span>Jira</span><span>Linear</span><span>Zephyr Scale</span></div></div>
+      <div class="skill-card reveal"><div class="ic"><svg viewBox="0 0 24 24"><path d="M12 2l2.4 7.4H22l-6.2 4.5 2.4 7.4L12 16.8l-6.2 4.5 2.4-7.4L2 9.4h7.6z"/></svg></div><h3>AI Tools &amp; Soft Skills</h3><div class="tags"><span>Claude</span><span>GitHub Copilot</span><span>Problem Solving</span><span>Communication</span><span>Stakeholder Management</span><span>Team Collaboration</span></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- EXPERIENCE -->
+<section id="experience">
+  <div class="container">
+    <div class="sec-head reveal"><div class="kicker">Where I've worked</div><h2>Experience</h2></div>
+    <div class="timeline">
+      <div class="tl-item current reveal">
+        <div class="tl-card">
+          <div class="tl-top"><h3>Senior SDET</h3><span class="date">Aug 2026 – Present</span></div>
+          <div class="company"><b>Recrosoft</b> · Project: Keychain (AI-powered CPG manufacturing platform)</div>
+          <div class="env"><span>Staging</span><i>→</i><span>UAT</span><i>→</i><span>Production</span></div>
+          <ul>
+            <li>Own end-to-end QA for new features, working from the PRD and frontend/backend Git branches; create test plans and Gherkin scenarios, and test manually on Staging.</li>
+            <li>Automate validated scenarios with Selenium WebDriver (Java, TestNG, Maven, POM) and backend API scenarios with Rest Assured.</li>
+            <li>Classify test cases as unit, integration and E2E, and close coverage gaps in existing features.</li>
+            <li>Run regression on UAT twice a week; log and track defects in Linear and verify fixes before release.</li>
+            <li>Use Claude skills to speed up test design and automation, and work with the client daily on requirements, test status and release readiness.</li>
+          </ul>
+        </div>
+      </div>
+      <div class="tl-item reveal">
+        <div class="tl-card">
+          <div class="tl-top"><h3>SDET</h3><span class="date">Jun 2023 – Mar 2026</span></div>
+          <div class="company"><b>Coforge</b> · Project: Aflac (Insurance)</div>
+          <ul>
+            <li>Analyzed BRDs, FRDs and user stories to design test scenarios and test cases, and identified automation candidates by stability, business criticality and regression frequency.</li>
+            <li>Executed functional, regression, smoke, sanity, integration, E2E and UAT testing, including pre-release regression and post-release validation.</li>
+            <li>Built and maintained Selenium WebDriver automation with Java, TestNG, Maven, POM and a data-driven framework, using GitHub Copilot to speed up scripting.</li>
+            <li>Performed API testing in Postman and backend validation with SQL, including data migration testing from Genelco to Wynsure.</li>
+            <li>Tested mobile apps on Android and iOS, managed the defect lifecycle in Jira, and worked in Agile Scrum teams.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROJECTS -->
+<section id="projects" class="alt">
+  <div class="container">
+    <div class="sec-head reveal"><div class="kicker">Things I've built</div><h2>Projects</h2></div>
+    <div class="projects">
+      <article class="proj reveal">
+        <div class="proj-head"><div class="type">UI Automation</div><h3>E-Commerce Automation Framework</h3></div>
+        <div class="proj-body">
+          <ul>
+            <li>Built a Page Object Model framework with explicit waits for synchronization and TestNG assertions for validation.</li>
+            <li>Implemented data-driven testing from CSV files, using TestNG annotations to manage setup and execution.</li>
+          </ul>
+          <div class="tags"><span>Selenium</span><span>Java</span><span>TestNG</span><span>POM</span></div>
+        </div>
+      </article>
+      <article class="proj reveal">
+        <div class="proj-head"><div class="type">API &amp; Performance</div><h3>Booking API Testing</h3></div>
+        <div class="proj-body">
+          <ul>
+            <li>Automated CRUD and authentication flows in Postman and Rest Assured, using environment variables for dynamic data (token, booking_id).</li>
+            <li>Validated status codes, response payloads and negative scenarios.</li>
+            <li>Ran load tests in JMeter with thread groups, parameterization and correlation.</li>
+          </ul>
+          <div class="tags"><span>Postman</span><span>Rest Assured</span><span>JMeter</span></div>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ACHIEVEMENTS -->
+<section id="achievements">
+  <div class="container">
+    <div class="sec-head reveal"><div class="kicker">Impact</div><h2>Achievements</h2></div>
+    <div class="ach">
+      <div class="ach-item reveal"><span class="tick">✓</span><p>Designed and executed <b>500+ manual test cases</b> across Aflac and Keychain releases, and automated key regression scenarios with Selenium, Java and TestNG.</p></div>
+      <div class="ach-item reveal"><span class="tick">✓</span><p>Cut <b>manual regression effort</b> with reusable POM and data-driven automation, and kept twice-weekly UAT regression at Keychain stable and on schedule.</p></div>
+      <div class="ach-item reveal"><span class="tick">✓</span><p>Strengthened backend coverage with <b>API automation</b> in Rest Assured and Postman, SQL data validation and data migration testing.</p></div>
+      <div class="ach-item reveal"><span class="tick">✓</span><p>Applied <b>BDD (Gherkin)</b> scenarios and unit/integration/E2E classification at Keychain, closing coverage gaps in existing features.</p></div>
+      <div class="ach-item reveal"><span class="tick">✓</span><p>Caught <b>high-impact defects before production</b> across web, mobile and API layers, tracked through Jira and Linear.</p></div>
+      <div class="ach-item reveal"><span class="tick">✓</span><p>Accelerated test design and scripting with <b>Claude</b> and <b>GitHub Copilot</b>, collaborating daily with clients, developers and product owners.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- CREDENTIALS -->
+<section id="credentials" class="alt">
+  <div class="container">
+    <div class="sec-head reveal"><div class="kicker">Learning</div><h2>Certifications &amp; Education</h2></div>
+    <div class="creds">
+      <div class="cred-col reveal">
+        <h3>Certifications &amp; Training</h3>
+        <div class="cred"><div class="t">LOMA 281 – Meeting Customer Needs with Insurance and Annuities</div><div class="s">LOMA · March 2025 · <a href="https://drive.google.com/file/d/1Fxx-BofPjBI9wxjXZ3dQYiplyzL8UcLD/view?usp=sharing" target="_blank" rel="noopener">View Certificate</a></div></div>
+        <div class="cred"><div class="t">The Complete Software Testing Bootcamp</div><div class="s">Udemy · Tarek Roshdy</div></div>
+        <div class="cred"><div class="t">Selenium WebDriver with Java – Basics to Advanced + Frameworks</div><div class="s">Udemy · Rahul Shetty</div></div>
+      </div>
+      <div class="cred-col reveal">
+        <h3>Education</h3>
+        <div class="cred"><div class="t">B.Tech in Computer Science &amp; Engineering</div><div class="s">SRMS CET, Bareilly · 2019 – 2023</div></div>
+        <div class="cred"><div class="t">Class XII (PCM)</div><div class="s">St. Anthony's School, Moradabad · 2018</div></div>
+        <div class="cred"><div class="t">Class X</div><div class="s">St. Anthony's School, Moradabad · 2015</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="contact">
+  <div class="container">
+    <div class="sec-head reveal"><div class="kicker">Let's talk</div><h2>Get In Touch</h2></div>
+    <p class="lead reveal">Open to Senior SDET and QA Automation opportunities. Reach out by email or connect with me on LinkedIn.</p>
+    <div class="contact-cards reveal">
+      <a class="c-card" href="mailto:hussain7mudassir@gmail.com"><div class="k">Email</div><div class="v">hussain7mudassir@gmail.com</div></a>
+      <a class="c-card" href="https://www.linkedin.com/in/mudassir-hussain-94010b221/" target="_blank" rel="noopener"><div class="k">LinkedIn</div><div class="v">mudassir-hussain</div></a>
+      <a class="c-card" href="https://github.com/Hussain1478" target="_blank" rel="noopener"><div class="k">GitHub</div><div class="v">Hussain1478</div></a>
+    </div>
+  </div>
+</section>
+
+<footer>© <span id="yr">2026</span> Mudassir Hussain · Senior SDET</footer>
+
+<script>
+document.documentElement.classList.add('js');
+var nav=document.getElementById('nav'),burger=document.getElementById('burger');
+function onScroll(){nav.classList.toggle('scrolled',window.scrollY>30)}
+window.addEventListener('scroll',onScroll);onScroll();
+burger.addEventListener('click',function(){var o=nav.classList.toggle('open');burger.setAttribute('aria-expanded',o)});
+document.querySelectorAll('.menu a').forEach(function(a){a.addEventListener('click',function(){nav.classList.remove('open');burger.setAttribute('aria-expanded',false)})});
+document.getElementById('yr').textContent=new Date().getFullYear();
+
+// active link on scroll
+var links=[].slice.call(document.querySelectorAll('.menu a[href^="#"]'));
+var secs=links.map(function(l){return document.querySelector(l.getAttribute('href'))});
+window.addEventListener('scroll',function(){
+  var y=window.scrollY+120,cur=0;
+  secs.forEach(function(s,i){if(s&&s.offsetTop<=y)cur=i});
+  links.forEach(function(l,i){l.classList.toggle('active',i===cur)});
+});
+
+// reveal
+if('IntersectionObserver' in window){
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.12});
+  document.querySelectorAll('.reveal').forEach(function(el){io.observe(el)});
+}else{document.querySelectorAll('.reveal').forEach(function(el){el.classList.add('in')})}
+
+// typing effect
+(function(){
+  var el=document.getElementById('typed'),words=['Senior SDET','Automation Engineer','QA Engineer','API Tester'],w=0,c=words[0].length,del=true;
+  if(window.matchMedia('(prefers-reduced-motion: reduce)').matches)return;
+  function tick(){
+    var word=words[w];
+    if(del){c--;if(c<0){del=false;w=(w+1)%words.length;c=0}}
+    else{c++;if(c>words[w].length){del=true;setTimeout(tick,1600);return}}
+    el.textContent=words[w].slice(0,Math.max(c,0));
+    setTimeout(tick,del?45:90);
+  }
+  setTimeout(tick,1800);
+})();
+</script>
+</body>
+</html>
